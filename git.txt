@@ -1,0 +1,55 @@
+Thao tác gới git  
+     các lệnh cơ bản thường dùng với git 
+Lệnh cơ bản tổng hợp với git  httpsxuanthulab.netcac-lenh-git-co-ban-lam-viec-voi-repository.html
+          - git init  tạo ra một repository ( kho chứa mã nguồn ) trên file làm việc hiện tại của máy 
+          - git clone  lấy một nguồn nhân bản từ trên mạng về máy 
+          - git pull đồng bộ từ repository trên mạng về máy 
+          - git add  thêm một file vào để chuẩn bị commit
+          - git commit  thêm code ( xác thực chính thức là lưu lại file vừa add ) vào repository  trong file của máy 
+          - git push  đồng bộ từ repository của máy lên repository trên mạng 
+          - git log  check trạng thái hoạt động các file 
+           unmodified  không thể đổi 
+           untracked  không bị theo dõi 
+           modified  sửa đổi 
+           staged  dàn dựng 
+     thao tác và các sửa dụng 
+          - git clone  sao chép một repository về máy , đồng thời có thể đổi tên repository
+                   +  git clone ...... ten_repository 
+                   ( không đổi tên sẽ lấy về một tên giống hệt repository trên mạng ) 
+          - git status  kiểm tra trạng thái các file trong repository ( kho chứa mã nguồn ) 
+          - git add   thêm những file mới vào để chuẩn bị commit vào repository 
+                   + git add .  thêm những file mới để chuẩn bị commit 
+                   + git add -u  thêm những thay đổi của file đã được theo dõi trước đó  ( đã tồn tại trong repository ) 
+                   + git add -A  thêm những file mới hoặc đã xóa bỏ để chuẩn bị commit 
+          - git commit  xác nhận chính thức là lưu lại các file đã được add trước đó ( kiểm tra xem các file đã được add chưa , sau đó add thêm file chưa được thêm  ) 
+                   + git commit -m mô tả file 
+                   + sau khi thay đổi file ta có thể dùng lệnh ( git commit -a -m  mô tả file ) , tương ứng cới git add -A và git commit -m 
+          - tạo local repository và push lên remote repository 
+                   +tạo git init 
+                   +add file
+                   +commit 
+                   +git remote add origin link 
+                   +git push -u origin master
+                           local địa phương 
+                           remote xa xôi 
+                           origin gốc 
+           - git log  hàm check trạng thái các file cho phép xem những lịch sử đã thực hiện commit 
+                   + git log 
+                   + git log --oneline xem ngắn gọn trên một dòng 
+           -git reset cho phép đưa con trỏ về một commit cụ thể nào đó 
+                   + có hai loại reset 
+                            - reset [mã commit ] quay trở lại commit cụ thể nào đó không bị mất code 
+                            - reset --hard [mã commit] quay trở lại commit cụ thể làm mất hết code , bản sao , trạng thái của file đã commit 
+           - git checkout [mã commit ] checkout về một commit cụ thể nào đó  xem ở commit đó có những thay đổi gì , có thể sửa đổi gì 
+                   + giúp đưa file về trạng thái commit đã check  xem thay đổi những gì , file trên github vẫn được giữ nguyên 
+           - lệnh xem n commit sau cùng ( git log -n ) trong đó n là số nguyên các commit 
+           - git commit --amend  gộp file vào commit cuối ( commit nhưng cập nhật thông tin vào commit cuối ) 
+           -git log -p xem chi tiết những thay đổi tại mỗi commit 
+           - git reset HEAD [ tên file cần loại bỏ ] giúp loại bỏ file (đưa về dạng untracked ) ra ngoài add trước khi commit 
+           - git branch [ tên nhánh mới ] tạo ra một nhánh mới 
+           - rename git branch  đổi tên branch . Được phân làm hai loại , đổi tên trong nhánh đang chạy và đổi tên nhánh ngoài 
+                   + đổi tên nhánh đang chạy  git branch -m [ tên mới của nhánh ]
+                   + đổi tên nhánh ngoài   git branch -m [tên nhánh cần đổi ] [tên nhánh mới ]
+           - git checkout [tên nhánh ] di chuyển giữa các nhánh 
+           - tạo nhánh đồng thời chuyển sang nhánh mới 
+                   + git checkout -b [tên nhánh mới ]
