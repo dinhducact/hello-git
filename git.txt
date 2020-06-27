@@ -45,7 +45,7 @@ Lệnh cơ bản tổng hợp với git  httpsxuanthulab.netcac-lenh-git-co-ban-
            - lệnh xem n commit sau cùng ( git log -n ) trong đó n là số nguyên các commit 
            - git commit --amend  gộp file vào commit cuối ( commit nhưng cập nhật thông tin vào commit cuối ) 
            -git log -p xem chi tiết những thay đổi tại mỗi commit 
-           - git reset HEAD [ tên file cần loại bỏ ] giúp loại bỏ file (đưa về dạng untracked ) ra ngoài add trước khi commit 
+           - git reset HEAD --[ tên file cần loại bỏ ] giúp loại bỏ file (đưa về dạng untracked ) ra ngoài add trước khi commit 
            - git branch [ tên nhánh mới ] tạo ra một nhánh mới 
            - rename git branch  đổi tên branch . Được phân làm hai loại , đổi tên trong nhánh đang chạy và đổi tên nhánh ngoài 
                    + đổi tên nhánh đang chạy  git branch -m [ tên mới của nhánh ]
