@@ -53,3 +53,4 @@ Lệnh cơ bản tổng hợp với git  httpsxuanthulab.netcac-lenh-git-co-ban-
            - git checkout [tên nhánh ] di chuyển giữa các nhánh 
            - tạo nhánh đồng thời chuyển sang nhánh mới 
                    + git checkout -b [tên nhánh mới ]
+- Dinh Duc-
